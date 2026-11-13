@@ -1,0 +1,565 @@
+
+/* =====================================
+   WANDERLUST HORIZONS
+   EXTERNAL CSS STYLESHEET
+===================================== */
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+/* BRAND COLORS */
+:root {
+    --primary: #0d9488;
+    --primary-dark: #0f766e;
+    --primary-light: #ccfbf1;
+    --dark: #0f172a;
+    --text: #334155;
+    --muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --danger: #e11d48;
+}
+
+/* NAVIGATION BAR */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+header a {
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary);
+}
+
+#mobile-menu-btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+#mobile-menu {
+    background: white;
+    padding: 15px;
+}
+
+#mobile-menu.hidden {
+    display: none;
+}
+
+/* HERO SECTION */
+#hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    background: var(--dark);
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 80px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: #e2e8f0;
+    margin-bottom: 30px;
+}
+
+.hero-content span {
+    color: #5eead4;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--primary);
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* COMMON SECTION STYLING */
+section {
+    padding: 70px 5%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-size: 2.3rem;
+    color: var(--dark);
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.section-subtitle {
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+/* DESTINATION CARDS */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.destination-card:hover img {
+    transform: scale(1.08);
+}
+
+.destination-content {
+    padding: 22px;
+}
+
+.destination-content h3 {
+    font-size: 21px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.destination-content p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.destination-price {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* BUTTONS */
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select-dest-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: var(--dark);
+    color: white;
+    font-weight: 600;
+}
+
+.select-dest-btn:hover {
+    background: var(--primary);
+}
+
+/* TRAVEL PACKAGES */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.package-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.package-card h3 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.package-card p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.package-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.package-card li {
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.package-card li i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.featured-package {
+    background: var(--dark);
+    color: white;
+}
+
+.featured-package p {
+    color: #cbd5e1;
+}
+
+/* TRIP FORM SECTION */
+#plan-trip {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.trip-form-container {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border);
+}
+
+.form-header {
+    background: linear-gradient(120deg, #0f172a, #134e4a);
+    padding: 35px;
+    color: white;
+}
+
+.form-header h2 {
+    font-size: 28px;
+    margin: 8px 0;
+}
+
+.form-header p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+#trip-inquiry-form {
+    padding: 35px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* VALIDATION ERRORS */
+.error-input {
+    border: 1px solid var(--danger) !important;
+    box-shadow: 0 0 0 1px var(--danger);
+}
+
+.error-message {
+    color: var(--danger);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* SELECTED DESTINATION BADGE */
+#selected-badge {
+    background: rgba(20, 184, 166, 0.15);
+    color: #99f6e4;
+    border: 1px solid rgba(45, 212, 191, 0.4);
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* CONFIRMATION MODAL */
+#confirmation-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(2, 6, 23, 0.75);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#confirmation-modal.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background: linear-gradient(120deg, var(--primary), var(--primary-dark));
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+}
+
+#close-modal-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: var(--dark);
+    color: white;
+    font-weight: 600;
+}
+
+#close-modal-btn:hover {
+    background: #334155;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    color: #94a3b8;
+    padding: 45px 5%;
+    text-align: center;
+}
+
+footer a {
+    color: #94a3b8;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #2dd4bf;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* TABLETS */
+@media (max-width: 1024px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .package-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 640px) {
+    section {
+        padding: 50px 5%;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-header {
+        padding: 25px;
+    }
+
+    #trip-inquiry-form {
+        padding: 22px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .destination-content {
+        padding: 16px;
+    }
+}
